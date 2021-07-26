@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Brave Stats</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <p id="requests">0</p>
+    <button class="btn" onclick="activate()">Start</button>
+    <p class="warning">Will crash ur browser after a while</p>
+
+    <script>
+      const activate = () => {
+        setInterval(async () => {
+          const random = (Math.random() * 10 * Math.PI).toString();
+          const el = document.getElementById('requests');
+
+          try {
+            await fetch(
+              `https://www.youtube.com/youtubei/v1/log_event?alt=json&key=${random}`
+            );
+          } catch (err) {
+            const requests = parseInt(el.innerHTML);
+            el.innerHTML = requests + 1;
+          }
+        }, 0);
+      };
+    </script>
+  </body>
+</html>
