@@ -15,5 +15,5 @@ const activate = () => {
       const requests = parseInt(el.innerHTML);
       el.innerHTML = requests + 1;
     }
-  }, delay);
+  }, settings.delay);
 };
