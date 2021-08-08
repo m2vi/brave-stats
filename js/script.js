@@ -13,7 +13,7 @@ const activate = () => {
       await fetch(url);
     } catch (err) {
       const requests = parseInt(el.innerHTML);
-      el.innerHTML = requests + 1;
+      el.innerText = requests + 1;
     }
   }, settings.delay);
 };
