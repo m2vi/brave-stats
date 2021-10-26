@@ -10,12 +10,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: #212529;
-  background: radial-gradient(
-    ellipse 100% 100% at 100% 100%,
-    #fb542b 0%,
-    #a91b78 46%,
-    #392dd1 100%
-  );
+  background: radial-gradient(ellipse 100% 100% at 100% 100%, #fb542b 0%, #a91b78 46%, #392dd1 100%);
   color: #fff;
   font-family: 'Poppins', 'sans-serif';
   line-height: 1.6;
@@ -36,6 +31,10 @@ body {
   border-radius: 8px;
   cursor: pointer;
   color: #fff;
+}
+
+.btn:hover {
+  opacity: 0.9;
 }
 
 #requests {
